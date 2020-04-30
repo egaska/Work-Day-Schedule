@@ -1,9 +1,30 @@
 
 //Global Variables
 var currentDayEl = document.getElementById("currentDay");
-var blockTime = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+
+    //Variable to store scheduale contents
+
+    var nineAM = document.getElementById('9');
+    var tenAM = document.getElementById('10');
+    var elevenAM = document.getElementById('11');
+    var twelvePM = document.getElementById('12');
+    var onePM = document.getElementById('13');
+    var twoPM = document.getElementById('14');
+    var threePM = document.getElementById('15');
+    var fourPM = document.getElementById('16');
+
+    //Variable to store the save buttons
+
+    var save9Button = document.getElementById("9Button");
+    var save10Button = document.getElementById("10Button"); 
+    var save11Button = document.getElementById("11Button"); 
+    var save12Button = document.getElementById("12Button"); 
+    var save1Button = document.getElementById("1Button"); 
+    var save2Button = document.getElementById("2Button"); 
+    var save3Button = document.getElementById("3Button"); 
+    var save4Button = document.getElementById("4Button"); 
+
 //Calling Functions
-// drawBlocks();
 colorChange();
 getCurrentTime();
 
@@ -25,31 +46,16 @@ function getCurrentTime() {
     return time;
 }
 
-// //Creates the hour blocks, assigns an hour id. Adds a counter
-// function drawBlocks() {
-//     for (let i = 0; i < blockTime.length; i++) {
-//         var hourBlock = document.createElement("div");
-//         var submitButton = document.createElement("button");
-//         submitButton.setAttribute("class", "submitButton");
-//         submitButton.setAttribute("id", blockTime[i] + " button")
-//         hourBlock.setAttribute("class", "hourBlock");
-//         hourBlock.setAttribute("id", blockTime[i]);
-//         hourBlock.innerText = blockTime[i] + ":";
-//         submitButton.innerText = "Update"
-//         $(".container").append(hourBlock);
-//         $(hourBlock).append(submitButton);
-//     }
-// }
-
+//Changes color of the hour divs based on the current time.
 function colorChange(event){
-    var timeBlock = getCurrentTime();
+    var time = getCurrentTime();
     $(".time-block").each(function() {
         var blockHour =  parseInt($(this).attr("id"));
         console.log(blockHour);
-        if (blockHour < timeBlock) {
+        if (blockHour < time) {
             $(this).addClass("past");
         }
-        else if (blockHour === timeBlock){
+        else if (blockHour === time){
             $(this).removeClass("past");
             $(this).addClass("present");
         }else {
@@ -59,6 +65,34 @@ function colorChange(event){
         }
     });
 }
+
+//Event Listeners
+save9Button.addEventListener("click", function(){
+    console.log("Test Button 9");
+}) 
+save10Button.addEventListener("click", function(){
+    console.log("Test Button 10");
+}) 
+save11Button.addEventListener("click", function(){
+    console.log("Test Button 11");
+}) 
+save12Button.addEventListener("click", function(){
+    console.log("Test Button 12");
+}) 
+save1Button.addEventListener("click", function(){
+    console.log("Test Button 1");
+}) 
+save2Button.addEventListener("click", function(){
+    console.log("Test Button 2");
+}) 
+save3Button.addEventListener("click", function(){
+    console.log("Test Button 3");
+}) 
+save4Button.addEventListener("click", function(){
+    console.log("Test Button 4");
+}) 
+
+
 
 
 
