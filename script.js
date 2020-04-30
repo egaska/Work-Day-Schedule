@@ -24,6 +24,19 @@ var currentDayEl = document.getElementById("currentDay");
     var save3Button = document.getElementById("3Button"); 
     var save4Button = document.getElementById("4Button"); 
 
+    //Elements to store the text input
+    var text9AM = document.getElementById("9Text");
+    var text10AM = document.getElementById("10Text");
+    var text11AM = document.getElementById("11Text");
+    var text12PM = document.getElementById("12Text");
+    var text1PM = document.getElementById("1Text");
+    var text2PM = document.getElementById("2Text");
+    var text3PM = document.getElementById("3Text");
+    var text4PM = document.getElementById("4Text");
+
+    //Test
+    // $("#9Text").append("Hello!");
+
 //Calling Functions
 colorChange();
 getCurrentTime();
@@ -66,31 +79,56 @@ function colorChange(event){
     });
 }
 
+function saveText9(){
+    var scheduleText = text9AM.value;
+    localStorage.setItem("nine", scheduleText);
+    console.log(localStorage.getItem("nine"));
+}
+function saveText10(){
+    var scheduleText = text10AM.value;
+    localStorage.setItem("ten", scheduleText);
+    console.log(localStorage.getItem("ten"));
+}
+function saveText11(){
+    var scheduleText = text11AM.value;
+    localStorage.setItem("eleven", scheduleText);
+    console.log(localStorage.getItem("eleven"));
+}
+function saveText12(){
+    var scheduleText = text12PM.value;
+    localStorage.setItem("twelve", scheduleText);
+    console.log(localStorage.getItem("twelve"));
+}
+function saveText1(){
+    var scheduleText = text1PM.value;
+    localStorage.setItem("one", scheduleText);
+    console.log(localStorage.getItem("one"));
+}
+function saveText2(){
+    var scheduleText = text2PM.value;
+    localStorage.setItem("two", scheduleText);
+    console.log(localStorage.getItem("two"));
+}
+function saveText3(){
+    var scheduleText = text3PM.value;
+    localStorage.setItem("three", scheduleText);
+    console.log(localStorage.getItem("three"));
+}
+function saveText4(){
+    var scheduleText = text4PM.value;
+    localStorage.setItem("four", scheduleText);
+    console.log(localStorage.getItem("four"));
+}
+
 //Event Listeners
-save9Button.addEventListener("click", function(){
-    console.log("Test Button 9");
-}) 
-save10Button.addEventListener("click", function(){
-    console.log("Test Button 10");
-}) 
-save11Button.addEventListener("click", function(){
-    console.log("Test Button 11");
-}) 
-save12Button.addEventListener("click", function(){
-    console.log("Test Button 12");
-}) 
-save1Button.addEventListener("click", function(){
-    console.log("Test Button 1");
-}) 
-save2Button.addEventListener("click", function(){
-    console.log("Test Button 2");
-}) 
-save3Button.addEventListener("click", function(){
-    console.log("Test Button 3");
-}) 
-save4Button.addEventListener("click", function(){
-    console.log("Test Button 4");
-}) 
+save9Button.addEventListener("click", saveText9);
+save10Button.addEventListener("click", saveText10); 
+save11Button.addEventListener("click", saveText11); 
+save12Button.addEventListener("click", saveText12); 
+save1Button.addEventListener("click", saveText1); 
+save2Button.addEventListener("click", saveText2); 
+save3Button.addEventListener("click", saveText3) 
+save4Button.addEventListener("click", saveText4); 
 
 
 
