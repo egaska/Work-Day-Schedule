@@ -40,6 +40,7 @@ var currentDayEl = document.getElementById("currentDay");
 //Calling Functions
 colorChange();
 getCurrentTime();
+getSchedule();
 
 //Gets the current date using moment()
 function getDate() {
@@ -79,6 +80,8 @@ function colorChange(event){
     });
 }
 
+
+//Functions to store text content in local storage.
 function saveText9(){
     var scheduleText = text9AM.value;
     localStorage.setItem("nine", scheduleText);
@@ -118,6 +121,18 @@ function saveText4(){
     var scheduleText = text4PM.value;
     localStorage.setItem("four", scheduleText);
     console.log(localStorage.getItem("four"));
+}
+
+//Function to add local storage data to page upon reload.
+function getSchedule(){
+    text9AM.innerText = localStorage.getItem("nine");
+    text10AM.innerText = localStorage.getItem("ten");
+    text11AM.innerText = localStorage.getItem("eleven");
+    text12PM.innerText = localStorage.getItem("twelve");
+    text1PM.innerText = localStorage.getItem("one");
+    text2PM.innerText = localStorage.getItem("two");
+    text3PM.innerText = localStorage.getItem("three");
+    text4PM.innerText = localStorage.getItem("four");
 }
 
 //Event Listeners
