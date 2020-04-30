@@ -9,5 +9,5 @@ A simple calendar application that allows the user to save events for each hour 
 - Allows user to store entered schedule information in local storage.
 
 
-![picture](./Assets/workday.JPG)
+![image of program](./Assets/workday.JPG)
 
