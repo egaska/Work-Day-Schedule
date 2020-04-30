@@ -70,27 +70,6 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-.hourBlock{
-  background-color: grey;
-  height: 100px;
-  border-style: double;
-  padding: 20px;
-}
-
-.currentHourBlock{
-  background-color: red;
-  align-self: right;
-
-}
-
-.pastHourBlock{
-  background-color: beige;
-}
-
-.futureHourBlock{
-  background-color: green;
-}
-
 .hide{
   display : none;
 }

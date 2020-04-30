@@ -4,6 +4,8 @@ var currentDayEl = document.getElementById("currentDay");
 var blockTime = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 //Calling Functions
 // drawBlocks();
+colorChange();
+getCurrentTime();
 
 //Gets the current date using moment()
 function getDate() {
@@ -18,7 +20,9 @@ function displayDate(date) {
 
 //Gets the current hour using moment()
 function getCurrentTime() {
-    return moment().hour();
+    var time =  moment().hour();
+    console.log("The time is " + time)
+    return time;
 }
 
 // //Creates the hour blocks, assigns an hour id. Adds a counter
@@ -37,7 +41,24 @@ function getCurrentTime() {
 //     }
 // }
 
-
+function colorChange(event){
+    var timeBlock = getCurrentTime();
+    $(".time-block").each(function() {
+        var blockHour =  parseInt($(this).attr("id"));
+        console.log(blockHour);
+        if (blockHour < timeBlock) {
+            $(this).addClass("past");
+        }
+        else if (blockHour === timeBlock){
+            $(this).removeClass("past");
+            $(this).addClass("present");
+        }else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+        }
+    });
+}
 
 
 
