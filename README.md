@@ -1,4 +1,4 @@
-#Work Day Scheduler
+# Work Day Scheduler
 
 A simple calendar application that allows the user to save events for each hour of the day.
 
@@ -9,5 +9,5 @@ A simple calendar application that allows the user to save events for each hour 
 - Allows user to store entered schedule information in local storage.
 
 
-![day planner demo](./Assets/workday.JPG)
+! [picture] (./Assets/workday.JPG)
 
